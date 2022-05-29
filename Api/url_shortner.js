@@ -12,7 +12,7 @@ route.post('/',async (req,res)=>{
         const { url } = req.body;
 
         // Validate url input
-        if (!validUrl.isUri(url)) {
+        if (!validUrl.isWebUri(url)) {
           return res.status(409).json({error: 'invalid url'});
         }
 
